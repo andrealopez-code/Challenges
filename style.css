@@ -1,0 +1,44 @@
+*{
+  background: rgb(169, 102, 214);
+  background: linear-gradient(
+    90deg,
+    rgba(169, 102, 214, 1) 0%,
+    rgba(247, 72, 72, 1) 50%,
+    rgba(252, 193, 109, 1) 100%
+  );
+}
+
+body{
+margin: 10px;
+padding: 10px;
+text-align: center;
+font-size: 30px;
+}
+
+h1{
+    padding-top: 50px;
+    color: azure;
+    text-shadow: black 5px 5px 4px;    
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding-top: 100px;
+  }
+
+input{
+    height: 100px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 40px;
+    font-family:'Times New Roman', Times, serif;
+    color: beige;
+    background: rgb(117, 117, 117);
+    border: 2px solid rgb(196, 196, 196);
+    border-radius: 50px;
+  }
+
