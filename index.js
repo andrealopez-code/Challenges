@@ -121,5 +121,82 @@ function operationNumber2() {
 }
 
 /*
+- Reto #5 “Resta de pizzas”
+    
+Llegaste a una fiesta con `X` cantidad de rebanadas de pizza (indicadas por el usuario), después de
+un rato se consumió `Y` cantidad de rebanadas y quedan `Z`.
 
+Fácil ¿cierto?
+
+El reto está en que expreses lo que sucede en una forma comprensible para cualquier persona, imprescindible pensar en tus usuarios.
+
+Entradas: 
+1. Pedir al usuario que coloque la cantidad de rebanadas de pizza.
+2. Pedir al usuario que coloque la cantidad que se consumió de rebanadas de pizza.
+Salidas: 
+1. Llevaste a la fiesta una pizza con x cantidad de rebanadas.
+2. En la fiesta consumieron y cantidad de rebanadas de pizza.
+3. Y te quedaron z cantidad de rebanadas de pizza.
+Proceso:
+1. Escribe [x] cantidad de rebanadas de pizza.
+2. Escribe [y] cantidad de rebanadas de pizza.
+3. Escribe [z] cantidad de rebanadas de pizza.
+4. Guardar en una variable [x] cantidad de rebanadas de pizza.
+5. Guardar en una variable [y] de rebanadas de pizza.
+6. Guardar en una variable [z] de rebanadas de pizza.
+7. Pasar a [x] rebandas de pizza a número.
+8. Pasar a [y] rebandas de pizza a número.
+9. Pasar a [z] rebandas de pizza a número.
+10. Operar [x] + [y].
+11. Guadar el resultado en una variable [z].
+12. Dar formato a dos decimales [z].
+13. Mostrar al usuario el resultado de [x] + [y] = [z].
+
+*/
+
+function amountPizza() {
+    let xPizza, yPizza, zPizza;
+    xPizza= prompt("¡Hola! Bienvenido a 'Fiesta en la ciudad', Veo que trajiste una pizza, ¿Qué cantidad de rebanadas de pizza has traido?");
+    yPizza= prompt("¿Cómo va la fiesta? Coloca que cantidad de rebanadas de pizza han consumido :)");
+    xPizza= parseFloat(xPizza);
+    yPizza= parseFloat(yPizza);
+    zPizza= (xPizza - yPizza);
+    zPizza= zPizza.toFixed(2);
+    alert("Se acabo la fiesta :(, ahora miremos cuantas rebanadas de pizza te quedaron. Trajiste " + xPizza + " y comieron " + yPizza + " entonces, te quedaron " + zPizza);
+}
+
+/*
+Reto #6 “Edad futura y pasada”
+Pide al usuario que indique su nombre y su edad. Como mensaje de salida le indicarás que edad tuvo el año pasado y cuantos años tendrá el siguiente año.
+Ejemplo:
+[nombre] el año pasado tenías X años y el próximo año cumplirás Y años.
+
+Entradas: [nombre del usuario] [edad del usuario].
+Salidas: [edad año pasado] [edad próximo año].
+Proceso: 
+1. Pedir al usuario que escriba su [nombre].
+2. Guardar [nombre] en una variable.
+3. Pedir al usuario que escriba su [edad].
+4. Guadar [edad en una variable].
+5. Declarar [lastAge] en una variable.
+6. Declarar [nextAge] en una variable.
+7. Pasar de string [edad] a número.   
+8. Hacer una operación para obtener [lastAge]. 
+9. Hacer una operación para obtener [nexttAge].
+10. Mostrar en pantalla la edad [lastAge] y [nexttAge].
+
+*/
+
+
+function getAge() {
+    let nameUser, ageUser, lastAge, nextAge;
+    nameUser= prompt("Hola tú, por favor escribe tu nombre");
+    ageUser= prompt("Si quieres saber cosas *-* escribe tu edad");
+    ageUser= parseFloat(ageUser);
+    lastAge= (ageUser - 1);
+    nextAge= (ageUser + 1);
+    //lastAge= --ageUser;
+    //nextAge= ++ageUser;
+    alert(nameUser + " el año pasado tenías " + lastAge + " y el próximo año cumplirás " + nextAge + " (porque obviamente no te sabes tú edad)");
+}
 
