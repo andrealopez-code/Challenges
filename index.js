@@ -200,3 +200,44 @@ function getAge() {
     alert(nameUser + " el año pasado tenías " + lastAge + " y el próximo año cumplirás " + nextAge + " (porque obviamente no te sabes tú edad)");
 }
 
+/*
+- Reto #7 “Divide la cuenta”
+    
+    Vas con tus amigos a tu restaurante favorito y acuerdan dividir la cuenta. Para facilitar las cosa pedirás al usuario que indique el total a pagar, entre cuantas personas se dvidirá la cuenta, porcentaje de propina a incluir y un porcentaje de impuestos. Deberás mostrar por pantalla el total a pagar incluyendo propina más impuestos y el total a pagar por cada persona.
+
+Entradas: [cuenta total] [personas a dividir la cuenta] [% propina] [% impuestos]
+Salidas: [total a pagar] [total a pagar por persona]
+Proceso:
+1. Pedir al usuario que coloque el total de la cuenta.
+2. Pedir al usuario que coloque la cantidad de personas en la que la que cuenta se divide.
+3. Pedir al usuario el porcentaje de propina.
+4. Pedir al usuario el porcentaje de impuestos.
+5. Declarar en una variable [total cuenta], [cantidad de personas], [% propina], [% impuestos], [total a pagar] y [total a pagar por persona].
+5. Guardar [total cuenta] en una variable.
+6. Guardar [cantidad de personas] en una variable.
+7. Guardar [% propina] en una variable.
+8. Guardar [% impuestos] en una variable.
+9. Pasar de string [las variables] a número.
+10. Hacer la operación [cuenta] + [% propina] y [% impuestos].
+11. Hacer la operación [total a pagar por persona].
+12. Dar formato a dos decimales.
+13. Mostrar en pantalla el total a pagar más [% propina] y [% impuestos] y el total a pagar por persona.
+
+*/
+
+function account() {
+    let total, people, tip, tax, totalAccount, totalPeople;
+    total= prompt("¡Bienvenidos! Espero hayan disfrutado su comida, por favor ingresa el total a pagar c:");
+    people= prompt("Veo que vinieron varias personas y, quieren dividir la cuenta, entonces coloca la cantidad de personas en las que dividirán su cuenta");
+    tip= prompt("Obvio el servivio fue maravilloso ;), así que coloca el porcentaje de propina que quieras dar");
+    tax= prompt("Por último, el gobierno roba mucho, así que debo pedirte que ingreses el procentaje de los impuestos");
+    total= parseFloat(total);
+    people= parseFloat(people);
+    tip= parseFloat(tip);
+    tax= parseFloat(tax);
+    totalAccount= (total + (tip/100) * total + (tax/100) * total);
+    totalPeople= (totalAccount / people);
+    totalAccount= totalAccount.toFixed(2);
+    totalPeople= totalPeople.toFixed(2);
+    alert("Ahora sabiendo que el total a pagar es " + totalAccount + " sumando la propina y los impuestos, cada uno debe pagar " + totalPeople);
+}
