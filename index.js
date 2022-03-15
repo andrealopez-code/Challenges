@@ -272,3 +272,32 @@ function convertorDays() {
     seconds= (minutes * 60);
     alert("La cantidad de horas es " + hours + ", la cantidad de minutos es " + minutes + " y la cantidad de segundos es " + seconds + " en " + days + " días, inutil humano :).");
 }
+
+/*
+- Reto #9 “Conversor de millas”
+    
+    Hay 1.609344 km en una milla (mi). Escribe un programa en el que el usuario indique una cantidad de millas y muestre en pantalla el resultado convertido a kilómetros.
+
+    Entradas: [x cantidad de millas].
+    Salidas: [Resultado a km].
+    Proceso: 
+    1. Pedir al usuario que escriba [x cantidad de millas].
+    2. Declarar en una constante [1.609344 km].
+    3. Pasar string [la constante] a número.
+    4. Declarar en una variable [x cantidad de millas].
+    5. Guardar [x cantidad de millas].
+    6. Pasar string [x cantidad de millas] a número.
+    7. Hacer una operación entre, [la constante] * [x cantidad de millas].
+    8. Colocar dos decimales a [km].
+    8. Mostrar al usuario [Resultado a km].
+    */
+
+    function convertorKm() {
+        let mile, km;
+        const und= (1.609344);
+        mile= prompt("Hola, veo que nunca sabes nada, para saber cuantas millas quieres convertir en kilómetros, coloca un número");
+        mile= parseFloat(mile);
+        km= (und * mile); 
+        km= km.toFixed(2);
+        alert("Entonces, en " + mile + " millas hay, " + km + "km, pequeño humano.");   
+    }
