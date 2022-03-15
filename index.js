@@ -241,3 +241,34 @@ function account() {
     totalPeople= totalPeople.toFixed(2);
     alert("Ahora sabiendo que el total a pagar es " + totalAccount + " sumando la propina y los impuestos, cada uno debe pagar " + totalPeople);
 }
+
+/*
+- Reto #8 “Calculando días”
+    
+    Escribe un programa al que le indiques una cantidad de días y como resultado deberá mostrar cuantas horas, minutos y segundos hay en dicha cantidad de días.
+
+Entradas: [cantidad de dias].
+Salidas: [Horas] [minutos] [segundos] En x cantidad de días.
+Proceso: 
+1. Pedir al usuario que escriba x cantidad de días.
+2. Declarar la variable [x cantidad de días].
+3. Declarar la variable [horas] de x cantidad de días.
+4. Declarar la variable [minutos] de x cantidad de días.
+5. Declarar la variable [segundos] de x cantidad de días.
+6. Guardar [x cantidad de días] en una variable. 
+7. Pasar de string [x cantidad de días] a número.
+8. Hacer una operación entre [x cantidad de días] * [24].
+9. Hacer una operación entre [x cantidad de horas] * [60].
+10. Hacer una operación entre [x cantidad de minutos] * [60].
+11. Mostrar al usuario [Horas] [minutos] [segundos] En x cantidad de días.
+    */
+
+function convertorDays() {
+    let days, hours, minutes, seconds;
+    days= prompt("Hola humano, quieres saber cuantas horas, minutos y segundos tiene una determinada cantidad de días, entonces digita un número de días");
+    days= parseFloat(days);
+    hours= (days * 24);
+    minutes= (hours * 60);
+    seconds= (minutes * 60);
+    alert("La cantidad de horas es " + hours + ", la cantidad de minutos es " + minutes + " y la cantidad de segundos es " + seconds + " en " + days + " días, inutil humano :).");
+}
