@@ -301,3 +301,36 @@ function convertorDays() {
         km= km.toFixed(2);
         alert("Entonces, en " + mile + " millas hay, " + km + "km, pequeño humano.");   
     }
+    
+    /*
+    - Reto #10 “Cuantas veces un número en otro”
+    
+    Pide al usuario ingresar un número mayor a 1000 y otro menor a 100. Indica de una forma sencilla de entender al usuario cuantas veces cabe el número menor a 100 en el número mayor a 1000.
+
+    Entradas: Pedir al usuario ingresar [#>1000] y [#<100].
+    Salidas: Que el usuario entienda cuantas veces cabe [#<100] en el [#>1000].
+    Proceso:
+    1. Declarar en una variable [#>1000].
+    2. Declarar en una variable [#<100].
+    3. Declarar en una variable [resultado].
+    4. Pedir al ususario ingresar [#>1000].
+    5. Pedir al usuario ingresar [#<100].
+    6. Guardar [#>1000] en una variable.
+    7. Guardar [#<100] en una variable. 
+    8. Pasar de string [#>1000] a número.
+    9. Pasar de string [#<100] a número.
+    10. Hacer la operación entre [#>1000] / [#<100].
+    11. Colocar dos decimales [resultado].
+    12. Mostrar al usuario el resultado de [#>1000] / [#<100].
+    */
+
+    function divide() {
+        let biggerNumber, smallerNumber, result;
+        biggerNumber= prompt("Hola amigo científico, si quieres saber cuanto cabe un número en otro, coloca una cifra mayor que 1000 ;)");
+        smallerNumber= prompt("Ahora, coloca un número menor que 100");
+        biggerNumber= parseFloat(biggerNumber);
+        smallerNumber= parseFloat(smallerNumber);
+        result= (biggerNumber/smallerNumber);
+        result= result.toFixed(2);
+        alert("Entonces, el número " + smallerNumber + " cabe " + result + " veces en " + biggerNumber + " :)");
+    }
